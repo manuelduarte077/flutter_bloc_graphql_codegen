@@ -12,6 +12,10 @@ dependencies:
   bloc: ^8.1.0
   cupertino_icons: ^1.0.2
   equatable: ^2.0.5
+
+  spacex_graphql:
+    path: packages/spacex_graphql
+
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.1
