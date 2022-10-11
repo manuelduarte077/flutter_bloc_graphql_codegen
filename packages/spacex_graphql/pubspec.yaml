@@ -8,10 +8,13 @@ environment:
   sdk: ">=2.18.2 <3.0.0"
 
 dependencies:
-  flutter:
-    sdk: flutter
+  graphql: ^5.1.2-beta.4
+  graphql_flutter: ^5.1.1-beta.4
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  flutter_lints: ^2.0.0
+  graphql_codegen: ^0.11.1
+  build_runner: ^2.3.0
+  json_serializable: ^6.5.1
+  mocktail: ^0.3.0
+
+  flutter_lints: ^2.0.1
