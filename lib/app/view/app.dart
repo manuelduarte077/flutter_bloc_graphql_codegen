@@ -1,18 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_graphql/features/home/home.dart';
+import 'package:spacex_graphql/spacex_graphql.dart';
+
+final client = GraphQLClient(
+  link: HttpLink('https://api.spacex.land/graphql/'),
+  cache: GraphQLCache(),
+);
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
+    return RepositoryProvider(
+      create: (context) => SpaceXGraphqlRepository(client: client),
+      child: MaterialApp(
+        theme: ThemeData(
+
         ),
-        body: const HomeScreen(),
+        home: const HomeScreen(),
       ),
     );
   }
