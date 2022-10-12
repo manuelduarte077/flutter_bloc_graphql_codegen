@@ -16,8 +16,12 @@ class MyApp extends StatelessWidget {
     return RepositoryProvider(
       create: (context) => SpaceXGraphqlRepository(client: client),
       child: MaterialApp(
-        theme: ThemeData(
-
+        theme: ThemeData.from(
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.deepPurple,
+            brightness: Brightness.light,
+          ),
         ),
         home: const HomeScreen(),
       ),
