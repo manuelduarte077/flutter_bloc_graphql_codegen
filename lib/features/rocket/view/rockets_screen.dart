@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_graphql/features/rocket/bloc/rockets_bloc.dart';
 
 class RocketsScreen extends StatelessWidget {
-  const RocketsScreen({Key? key}) : super(key: key);
+  const RocketsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
