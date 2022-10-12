@@ -7,10 +7,7 @@ part 'rockets_event.dart';
 part 'rockets_state.dart';
 
 class RocketsBloc extends Bloc<RocketsEvent, RocketsState> {
-  final SpaceXGraphqlRepository repository;
-
-  RocketsBloc({required this.repository})
-      : super(const RocketsState(status: RocketsStatus.initial, rockets: [])) {
+  RocketsBloc({required this.repository}) : super(const RocketsState()) {
     on<GetRockets>((event, emit) async {
       try {
         if (state.status == RocketsStatus.initial) {
@@ -24,4 +21,6 @@ class RocketsBloc extends Bloc<RocketsEvent, RocketsState> {
       }
     });
   }
+
+  final SpaceXGraphqlRepository repository;
 }
