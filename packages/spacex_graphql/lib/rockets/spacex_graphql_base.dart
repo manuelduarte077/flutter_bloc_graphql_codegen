@@ -12,7 +12,7 @@ class SpaceXGraphqlRepository {
     if (!data.hasException) {
       return data.parsedData?.rockets;
     } else {
-      throw '${data.exception?.linkException}';
+      throw '${data.exception?.graphqlErrors}';
     }
   }
 }
