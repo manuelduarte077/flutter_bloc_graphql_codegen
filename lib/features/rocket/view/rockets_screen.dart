@@ -23,6 +23,7 @@ class RocketsScreen extends StatelessWidget {
                     itemBuilder: (_, index) => ListTile(
                       title: Text(
                         '${state.rockets[index]?.name}',
+                        style: const TextStyle(fontSize: 18),
                       ),
                       subtitle: Text(
                         '${state.rockets[index]?.description}',
@@ -33,8 +34,10 @@ class RocketsScreen extends StatelessWidget {
                         size: 50,
                       ),
                     ),
-                    separatorBuilder: (_, index) => const SizedBox(
-                      height: 10,
+                    separatorBuilder: (_, index) => const Divider(
+                      color: Colors.deepPurple,
+                      endIndent: 15,
+                      indent: 15,
                     ),
                     itemCount: state.rockets.length,
                   ),
